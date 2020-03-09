@@ -1,0 +1,18 @@
+{% for tab in fieldLayout.getTabs() %}
+    <div id="tab{{ loop.index }}" class="hidden">
+        {% include "_includes/fields" with {
+            fields: tab.getFields(),
+            element: order,
+        } only %}
+    </div>
+{% endfor %}
+
+{% for tab in fieldLayout.getTabs() %}
+<div id="tab{{ loop.index }}Static" class="hidden static">
+    {% include "_includes/fields" with {
+    fields: tab.getFields(),
+    element: order,
+    static: true
+    } only %}
+</div>
+{% endfor %}

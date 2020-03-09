@@ -1,0 +1,58 @@
+{
+  "name": "craftcms/commerce",
+  "description": "Craft Commerce",
+  "type": "craft-plugin",
+  "version": "3.0.11",
+  "keywords": [
+    "cms",
+    "craftcms",
+    "commerce",
+    "yii2"
+  ],
+  "homepage": "https://craftcommerce.com",
+  "license": "proprietary",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/commerce/issues?state=open",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/commerce",
+    "docs": "https://docs.craftcms.com/commerce/v2/",
+    "rss": "https://github.com/craftcms/commerce/releases.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.4.0",
+    "dompdf/dompdf": "^0.8.3",
+    "moneyphp/money": "^3.2.1",
+    "ibericode/vat": "^1.1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\commerce\\": "src/",
+      "craftcommercetests\\fixtures\\": "tests/fixtures/"
+    }
+  },
+  "extra": {
+    "handle": "commerce",
+    "name": "Craft Commerce",
+    "description": "An amazingly powerful and flexible e-commerce platform for Craft CMS.",
+    "developer": "Pixel & Tonic",
+    "documentationUrl": "https://docs.craftcms.com/commerce/v2/"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "codeception/codeception": "^3.0",
+    "vlucas/phpdotenv": "^3.4"
+  },
+  "scripts": {
+    "testunit": [
+      "Composer\\Config::disableProcessTimeout",
+      "codecept run unit"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php":  "7.1.30"
+    }
+  }
+}
